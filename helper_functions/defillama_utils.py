@@ -292,7 +292,7 @@ def get_protocol_names_by_flag(check_flag):
 def get_protocol_tvls(min_tvl = 0, excluded_cats = ['CEX','Chain']): #,excluded_flags = ['staking','pool2']):
         all_api = 'https://api.llama.fi/protocols'
         resp = pd.DataFrame( r.get(all_api, headers=header).json() )
-        resp = resp[resp['tvl'] > min_tvl ] ##greater than X
+        resp = resp[resp['tvl'] >= min_tvl ] ##greater than X
         if excluded_cats != []: #If we have cagtegories to exclude
                 resp = resp[~resp['category'].isin(excluded_cats)]
         # Get Other Flags -- not working right now?
