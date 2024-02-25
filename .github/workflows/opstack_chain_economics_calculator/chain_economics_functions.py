@@ -2,10 +2,6 @@
 
 import chain as c
 
-def initialize_chain():
-    sample_chain = 0 #Maybe define a chain() object, so we can just access its values, versus tracking what functions we return
-
-    return sample_chain
 # This Function returns the total expected Revenue from projected L2 Execution
 def total_revenue_execution(chain):
     total_revenue_execution_eth = 0
